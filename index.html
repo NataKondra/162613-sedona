@@ -15,6 +15,9 @@
             <a href="#">Фото и Видео</a>
           </li>
           <li>
+            <img class="header-logo" src="http://placehold.it/50x50" width="50" height="50" alt="City of Sedona">
+          </li>
+          <li>
             <a href="#">Карта штата</a>
           </li>
           <li>
@@ -24,9 +27,8 @@
         </nav>
     </header>
     <main class="container">
-      <div class="index-logo">
+      <div class="index-intro">
         <img src="http://placehold.it/400x200" width="400" height="200" alt="Welcome to Sedona">
-        <div class="mask"></div>
       </div>
       <div class="index-promo">
         <b class="title">Седона — небольшой городок в Аризоне,<br>
@@ -100,24 +102,20 @@
           Укажите предполагаемые даты поездки,
           и мы покажем вам лучшие предложения гостинец в Седоне
         </p>
-        <a class="button" href="#">Поиск гостиницы в Седоне</a>
-        <form id="hotel-search" class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
-          <label>
-            Дата заезда:
-            <input name="checkin-date" type="text">
-          </label><br>
-          <label>
-            Дата выезда:
-            <input name="checkout-date" type="text">
-          </label><br>
-          <label>
-            Взрослые:
-            <input name="adults" type="text">
-          </label>
-          <label>
-            Дети:
-            <input name="children" type="text">
-          </label><br>
+        <a class="btn" href="#">Поиск гостиницы в Седоне</a>
+        <form id="hotel-search" class="hotel-search" action="https://echo.htmlacademy.ru" method="post">
+          <label for="checkin-date">Дата заезда:</label>
+          <input id="checkin-date" name="checkin-date" type="text" value="24 апреля 2016"><br>
+          <label for="checkout-date">Дата выезда:</label>
+          <input id="checkout-date" name="checkout-date" type="text" value="4 июля 2016"><br>
+          <label for="adults-number">Взрослые:</label>
+          <button class="btn btn-minus" id="btn-adults-minus"></button>
+          <input id="adults-number" name="adults-number" type="text" value="2">
+          <button class="btn btn-plus" id="btn-adults-plus"></button>
+          <label for="kids-number">Дети:</label>
+          <button class="btn btn-minus" id="btn-kids-minus"></button>
+          <input id="kids-number" name="kids-number" type="text" value="0">
+          <button class="btn btn-plus" id="btn-kids-plus"></button><br>
           <button class="btn" type="submit">Найти</button>
         </form>
       </div>
@@ -128,15 +126,19 @@
     <footer class="main-footer">
       <div class="container">
         <div class="footer-link">
-          <a href="#">#visitsedona</a>
+          <p>#visitsedona</p>
         </div>
         <div class="footer-social">
-          <a class="social-btn social-btn-vk" href="#">vk.com</a>
-          <a class="social-btn social-btn-fb" href="#">facebook.com</a>
-          <a class="social-btn social-btn-vimeo" href="#">vimeo.com</a>
+          <p>
+            <a class="social-btn social-btn-vk" href="#">vk.com</a>
+            <a class="social-btn social-btn-fb" href="#">facebook.com</a>
+            <a class="social-btn social-btn-vimeo" href="#">vimeo.com</a>
+          </p>
         </div>
         <div class="footer-copyright">
-          Website by <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+          <p>
+            Website by <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+          </p>
         </div>
       </div>
     </footer>
