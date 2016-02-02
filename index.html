@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -15,7 +16,7 @@
             <a href="#">Фото и Видео</a>
           </li>
           <li>
-            <img class="header-logo" src="http://placehold.it/50x50" width="50" height="50" alt="City of Sedona">
+            <img class="header-logo" src="img/header-logo.png" width="138" height="70" alt="City of Sedona">
           </li>
           <li>
             <a href="#">Карта штата</a>
@@ -28,86 +29,71 @@
     </header>
     <main class="container">
       <div class="index-intro">
-        <img src="http://placehold.it/400x200" width="400" height="200" alt="Welcome to Sedona">
+        <img style="background-color: lightblue;" src="img/welcome.png" width="458" height="352" alt="Welcome to Sedona">
       </div>
       <div class="index-promo">
-        <b class="title">Седона — небольшой городок в Аризоне,<br>
-          заслуживающий большего!</b>
+        <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         <div class="promo-item-big">
-          <div class="promo-container">
-            <b class="title">
-              Настоящий<br>
-              городок
-            </b>
+          <div class="promo-container promo-white-blue">
+            <h3>Настоящий городок</h3>
             <p>— №1 —</p>
             <p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img class="promo-image" src="http://placehold.it/300x100" width="300" height="100" alt="Open Range">
+          <img class="promo-image" src="img/openrange.jpg" width="800" height="256" alt="Open Range">
           <div class="promo-details">
-            <a class="promo-container" href="#">
-              <div class="icon icon-apt"></div>
-              <b class="title">Жилье</b>
+            <a class="promo-container icon-apt" href="#">
+              <h3>Жилье</h3>
               <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
             </a>
-            <a class="promo-container" href="#">
-              <div class="icon icon-food"></div>
-              <b class="title">Еда</b>
+            <a class="promo-container icon-food" href="#">
+              <h3>Еда</h3>
               <p>Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
             </a>
-            <a class="promo-container" href="#">
-              <div class="icon icon-gifts"></div>
-              <b class="title">Сувениры</b>
+            <a class="promo-container icon-gifts" href="#">
+              <h3>Сувениры</h3>
               <p>Не только китайского, но и местного производства!</p>
             </a>
           </div>
         </div>
         <div class="promo-item-big">
-          <img class="promo-image" src="http://placehold.it/300x100" width="300" height="100" alt="Diablo Bridge">
-          <div class="promo-container">
-            <b class="title">
-              Там есть<br>
-              Мост Дьявола</b>
+          <img class="promo-image" src="img/diablo.jpg" width="800" height="256" alt="Diablo Bridge">
+          <div class="promo-container promo-white-blue">
+            <h3>Там есть Мост Дьявола</h3>
             <p>— №2 —</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
         </div>
         <div class="promo-item-small">
-          <div class="promo-container">
-            <b class="title">
-              Небольшая<br>
-              площадь</b>
+          <div class="promo-container promo-black-gray">
+            <h3>Небольшая площадь</h3>
             <p>— №3 —</p>
             <p>Все достопримечательности находятся очень близко</p>
           </div>
-          <div class="promo-container">
-            <b class="title">
-              Красивая<br>
-              дорога</b>
+          <div class="promo-container promo-black-gray">
+            <h3>Красивая дорога</h3>
             <p>— №4 —</p>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
-          <div class="promo-container">
-            <b class="title">
-              Мало<br>
-              туристов</b>
+          <div class="promo-container promo-black-gray">
+            <h3>Мало туристов</h3>
             <p>— №5 —</p>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </div>
       </div>
       <div class="index-hotel-search">
-        <b class="title">Заинтересовались?</b>
+        <h2>Заинтересовались?</h2>
         <p>
           Укажите предполагаемые даты поездки,
           и мы покажем вам лучшие предложения гостинец в Седоне
         </p>
-        <a class="btn" href="#">Поиск гостиницы в Седоне</a>
+        <a class="btn" href="#hotel-search">Поиск гостиницы в Седоне</a>
         <form id="hotel-search" class="hotel-search" action="https://echo.htmlacademy.ru" method="post">
           <label for="checkin-date">Дата заезда:</label>
-          <input id="checkin-date" name="checkin-date" type="text" value="24 апреля 2016"><br>
+          <input id="checkin-date" name="checkin-date" type="text" value="24 апреля 2016">
           <label for="checkout-date">Дата выезда:</label>
-          <input id="checkout-date" name="checkout-date" type="text" value="4 июля 2016"><br>
+          <input id="checkout-date" name="checkout-date" type="text" value="4 июля 2016">
           <label for="adults-number">Взрослые:</label>
           <button class="btn btn-minus" id="btn-adults-minus"></button>
           <input id="adults-number" name="adults-number" type="text" value="2">
@@ -115,12 +101,12 @@
           <label for="kids-number">Дети:</label>
           <button class="btn btn-minus" id="btn-kids-minus"></button>
           <input id="kids-number" name="kids-number" type="text" value="0">
-          <button class="btn btn-plus" id="btn-kids-plus"></button><br>
+          <button class="btn btn-plus" id="btn-kids-plus"></button>
           <button class="btn" type="submit">Найти</button>
         </form>
       </div>
       <div class="index-map">
-        <img src="http://placehold.it/600x200" width="600" height="200" alt="Sedona Map">
+        <img src="img/map.jpg" width="1200" height="593" alt="Sedona Map">
       </div>
     </main>
     <footer class="main-footer">
@@ -137,7 +123,9 @@
         </div>
         <div class="footer-copyright">
           <p>
-            Website by <a class="btn" href="https://htmlacademy.ru">HTML Academy</a>
+            Website by <a class="btn" href="https://htmlacademy.ru">
+              <img src="img/aka.png" width="113" height="39" alt="HTML Academy">
+            </a>
           </p>
         </div>
       </div>

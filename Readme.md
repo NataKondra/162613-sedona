@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Natalya Kondrashova](https://htmlacademy.ru/profile/id162613).
-* Наставник: Антон Попов.
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
 
 ---
 
