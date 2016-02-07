@@ -1,29 +1,19 @@
 body {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
-  font-style: normal;
-  font-weight: normal;
   text-transform: uppercase;
-  color: #333333;
+  color: #333;
 }
 
 h2 {
-  font-family: "PT Sans Bold";
   font-size: 21px;
   line-height: 26px;
-  font-style: normal;
-  font-weight: bold;;
-  text-transform: uppercase;
   color: black;
 }
 
 h3 {
-  font-family: "PT Sans Bold";
   font-size: 21px;
   line-height: 21px;
-  font-style: normal;
-  font-weight: bold;;
-  text-transform: uppercase;
   color: black;
 }
