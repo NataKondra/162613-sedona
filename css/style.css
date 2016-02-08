@@ -24,6 +24,10 @@ p, span, a, h2, h3 {
   outline: 2px purple solid;
 }
 
+img {
+    outline: 2px yellow solid;
+}
+
 .main-header {
   background-color: rgba(255, 0, 0, 0.2);
   outline: 2px red solid;
@@ -63,8 +67,6 @@ p, span, a, h2, h3 {
   width: 458px;
   height: 352px;
   margin: 0 auto;
-
-  outline: 2px yellow solid;
 }
 
 main {
@@ -190,4 +192,94 @@ main {
 .footer-copyright img {
   width: 113px;
   height: 39px;
+}
+
+.hotels-filter {
+  padding-left: 72px;
+  padding-right: 72px;
+
+  background-color: rgba(0, 255, 0, 0.2);
+  outline: 2px green solid;
+}
+
+.hotels-filter .features,
+.hotels-filter .housing {
+  float: left;
+  width: 255px;
+  min-height: 217px;
+  text-align: left;
+
+  background-color: rgba(0, 0, 255, 0.2);
+  outline: 2px blue solid;
+}
+
+.hotels-filter .pricing {
+  float: right;
+  width: 318px;
+  min-height: 217px;
+  text-align: left;
+
+  background-color: rgba(0, 0, 255, 0.2);
+  outline: 2px blue solid;
+}
+
+.hotels-results-sort {
+  min-height: 57px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-top: 30px;
+  text-align: left;
+
+  background-color: rgba(0, 255, 0, 0.2);
+  outline: 2px green solid;
+}
+
+.hotels-items {
+  padding-left: 72px;
+  padding-right: 72px;
+  text-align: left;
+  list-style: none;
+
+  background-color: rgba(0, 255, 0, 0.2);
+  outline: 2px green solid;
+}
+
+.hotels-items > li {
+  border-top: 1px #e5e5e5 solid;
+  border-bottom: 1px #e5e5e5 solid;
+  min-height: 118px;
+  padding-top: 30px;
+}
+
+.hotels-items img {
+  float: left;
+  width: 135px;
+  height: 90px;
+  margin-right: 30px;
+}
+
+.hotels-items h2 {
+  margin: 0;
+}
+
+.hotels-items .item-details {
+  float: left;
+  width: 260px;
+
+  background-color: rgba(0, 0, 255, 0.2);
+  outline: 2px blue solid;
+}
+
+.hotels-items .item-rating {
+  float: right;
+  width: 110px;
+  text-align: right;
+
+  background-color: rgba(0, 0, 255, 0.2);
+  outline: 2px blue solid;
+}
+
+.hotels-footer {
+  background-color: rgba(0, 255, 0, 0.2);
+  outline: 2px green solid;
 }
