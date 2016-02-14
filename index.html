@@ -3,28 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/symbols-sedona.css">
   </head>
   <body>
     <header class="main-header container">
       <nav class="main-navigation">
         <ul class="clearfix">
-          <li>
+          <li class="item-float-left">
             <a href="#">Информация</a>
           </li>
-          <li>
+          <li class="item-float-left">
             <a href="#">Фото и Видео</a>
           </li>
-          <li>
-            <a href="#"><img class="header-logo" src="img/header-logo.png" width="138" height="70" alt="City of Sedona"></a>
+          <li class="item-float-right">
+            <a href="hotels.html">Гостиницы</a>
           </li>
-          <li>
+          <li class="item-float-right">
             <a href="#">Карта штата</a>
           </li>
-          <li>
-            <a href="#">Гостиницы</a>
-          </li>
         </ul>
+        <a class="item-index-logo" href="index.html"><img src="img/header-logo.png" width="138" height="70" alt="City of Sedona"></a>
       </nav>
       <div class="main-header-intro">
         <img src="img/welcome.png" width="458" height="352" alt="Welcome to Sedona">
@@ -42,15 +42,15 @@
           </div>
         </div>
         <div class="promo-details">
-          <div class="promo-container promo-icon-apt">
+          <div class="promo-container background-apt">
             <h3>Жилье</h3>
             <p>Рекомендуем пожить в&nbsp;настоящем мотеле, все&nbsp;как в кино!</p>
           </div>
-          <div class="promo-container promo-icon-food">
+          <div class="promo-container background-food">
             <h3>Еда</h3>
             <p>Всегда заказывайте фирменный&nbsp;бургер, Вы&nbsp;не&nbsp;разочаруетесь!</p>
           </div>
-          <div class="promo-container promo-icon-gifts">
+          <div class="promo-container background-gift">
             <h3>Сувениры</h3>
             <p>Не только китайского, но&nbsp;и&nbsp;местного производства!</p>
           </div>
@@ -86,35 +86,43 @@
           Укажите предполагаемые даты поездки,
           и&nbsp;мы&nbsp;покажем вам лучшие предложения гостиниц в Седоне
         </p>
-        <a class="btn" href="#hotel-search">Поиск гостиницы в Седоне</a>
+        <a class="btn-brown" href="#hotel-search">Поиск гостиницы в Седоне</a>
       </div>
     </main>
     <footer class="main-footer container">
-      <form id="hotel-search" class="hotel-search" action="https://echo.htmlacademy.ru" method="post">
-        <label for="checkin-date">Дата заезда:</label>
-        <input id="checkin-date" name="checkin-date" type="text" value="24 апреля 2016">
-        <label for="checkout-date">Дата выезда:</label>
-        <input id="checkout-date" name="checkout-date" type="text" value="4 июля 2016">
-        <label for="adults-number">Взрослые:</label>
-        <button class="btn-minus" id="btn-adults-minus" type="button"></button>
-        <input id="adults-number" name="adults-number" type="text" value="2">
-        <button class="btn-plus" id="btn-adults-plus" type="button"></button>
-        <label for="kids-number">Дети:</label>
-        <button class="btn-minus" id="btn-kids-minus" type="button"></button>
-        <input id="kids-number" name="kids-number" type="text" value="0">
-        <button class="btn-plus" id="btn-kids-plus" type="button"></button>
-        <button class="btn" type="submit">Найти</button>
+      <form class="hotel-search" id="hotel-search" action="hotels.html" method="get">
+        <label class="date clearfix">
+          Дата заезда:
+          <input class="date" name="checkin-date" type="text" value="24 апреля 2016">
+          <span class="date icon-calendar"></span>
+        </label>
+        <label class="date clearfix">
+          Дата выезда:
+          <input class="date" name="checkout-date" type="text" value="4 июля 2016">
+          <span class="date icon-calendar"></span>
+        </label>
+        <label class="adults-number clearfix" for="adults-number">
+          Взрослые:
+          <button class="number icon-plus" type="button"></button>
+          <input class="number" id="adults-number" name="adults-number" type="text" value="2">
+          <button class="number icon-minus" type="button"></button>
+        </label>
+        <label class="kids-number clearfix" for="kids-number">
+          Дети:
+          <button class="number icon-plus" type="button"></button>
+          <input class="number" id="kids-number" name="kids-number" type="text" value="0">
+          <button class="number icon-minus" type="button"></button>
+        </label>
+        <button class="btn-blue" type="submit">Найти</button>
       </form>
       <div class="footer-content">
-        <div class="footer-link">
-          <p>#visitsedona</p>
+        <div class="footer-hashtag">
+          #visitsedona
         </div>
         <div class="footer-social">
-          <p>
-            <a class="social-btn social-btn-vk" href="#">vk.com</a>
-            <a class="social-btn social-btn-fb" href="#">facebook.com</a>
-            <a class="social-btn social-btn-vimeo" href="#">vimeo.com</a>
-          </p>
+          <a class="btn-blue icon-twitter" href="#"></a>
+          <a class="btn-blue icon-facebook" href="#"></a>
+          <a class="btn-blue icon-youtube" href="#"></a>
         </div>
         <div class="footer-copyright">
           <span>Website by</span>
