@@ -5,9 +5,10 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/symbols-sedona.css">
   </head>
   <body>
-    <header class="main-header container">
+    <header class="container">
       <nav class="main-navigation">
         <ul class="clearfix">
           <li class="item-float-left">
@@ -28,21 +29,33 @@
       <form class="hotels-filter clearfix">
         <div class="features">
           <h3>Инфраструктура:</h3>
-          <input type="checkbox" name="features-pool" id="features-pool" checked>
-          <label for="features-pool">Бассейн</label><br>
-          <input type="checkbox" name="features-parking" id="features-parking">
-          <label for="features-parking">Парковка</label><br>
-          <input type="checkbox" name="features-wifi" id="features-wifi">
-          <label for="features-wifi">Wi-Fi</label>
+          <label>
+            <input type="checkbox" name="features-pool" id="features-pool" checked>
+            Бассейн
+          </label>
+          <label>
+            <input type="checkbox" name="features-parking" id="features-parking">
+            Парковка
+          </label>
+          <label>
+            <input type="checkbox" name="features-wifi" id="features-wifi">
+            Wi-Fi
+          </label>
         </div>
         <div class="housing">
           <h3>Тип жилья:</h3>
-          <input type="checkbox" name="housing-hotel" id="housing-hotel" checked>
-          <label for="housing-hotel">Гостиница</label><br>
-          <input type="checkbox" name="housing-motel" id="housing-motel" checked>
-          <label for="housing-motel">Мотель</label><br>
-          <input type="checkbox" name="housing-aparments" id="housing-aparments" checked>
-          <label for="housing-aparments">Апартменты</label>
+          <label>
+            <input type="checkbox" name="housing-hotel" checked>
+            Гостиница
+          </label>
+          <label>
+            <input type="checkbox" name="housing-motel" checked>
+            Мотель
+          </label>
+          <label>
+            <input type="checkbox" name="housing-aparments" id="housing-aparments" checked>
+            Апартменты
+          </label>
         </div>
         <div class="pricing">
           <h3>Стоимость в сутки (р):</h3>
@@ -60,14 +73,14 @@
       </form>
     </header>
     <main class="container">
-      <div class="hotels-results-sort">
+      <div class="hotels-results-sort clearfix">
         <b class="results-title">Найдено: 3</b>
         <span>Сортировка:</span>
-        <a class="btn-sort btn-active" href="#">По цене</a>
+        <a class="btn-sort active" href="#">По цене</a>
         <a class="btn-sort" href="#">По типу</a>
         <a class="btn-sort" href="#">По рейтингу</a>
-        <a class="btn-sort-up" href="#">up</a>
-        <a class="btn-sort-down btn-active" href="#">down</a>
+        <a class="btn-sort-dir icon-down-dir active" href="#"></a>
+        <a class="btn-sort-dir icon-up-dir" href="#"></a>
       </div>
       <ul class="hotels-items">
         <li class="clearfix">
@@ -78,15 +91,15 @@
               <span class="item-type">Гостиница</span>
               <span class="item-price">от 3500 р.</span>
             </p>
-            <a class="btn btn-details" href="#">Подробнее</a>
-            <a class="btn btn-book" href="#">Забронировать</a>
+            <a class="btn-blue" href="#">Подробнее</a>
+            <a class="btn-brown" href="#">Забронировать</a>
           </div>
           <div class="item-rating">
             <p>
-              <span class="icon-star">*</span>
-              <span class="icon-star">*</span>
-              <span class="icon-star">*</span>
-              <span class="icon-star">*</span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
             </p>
             <p class="rating">
               Рейтинг: 8.5
@@ -101,13 +114,13 @@
               <span class="item-type">Мотель</span>
               <span class="item-price">от 2000 р.</span>
             </p>
-            <a class="btn btn-details" href="#">Подробнее</a>
-            <a class="btn btn-book" href="#">Забронировать</a>
+            <a class="btn-blue" href="#">Подробнее</a>
+            <a class="btn-brown" href="#">Забронировать</a>
           </div>
           <div class="item-rating">
             <p>
-              <span class="icon-star">*</span>
-              <span class="icon-star">*</span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
             </p>
             <p class="rating">Рейтинг: 8.9</p>
           </div>
@@ -120,14 +133,14 @@
               <span class="item-type">Апартаменты</span>
               <span class="item-price">от 4000 р.</span>
             </p>
-            <a class="btn btn-details" href="#">Подробнее</a>
-            <a class="btn btn-book" href="#">Забронировать</a>
+            <a class="btn-blue" href="#">Подробнее</a>
+            <a class="btn-brown" href="#">Забронировать</a>
           </div>
           <div class="item-rating">
             <p>
-              <span class="icon-star">*</span>
-              <span class="icon-star">*</span>
-              <span class="icon-star">*</span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
+              <span class="icon-star"></span>
             </p>
             <p class="rating">Рейтинг: 9.2</p>
           </div>
@@ -136,15 +149,13 @@
     </main>
     <footer class="hotels-footer container">
       <div class="footer-content">
-        <div class="footer-link">
-          <p>#visitsedona</p>
+        <div class="footer-hashtag">
+          #visitsedona
         </div>
         <div class="footer-social">
-          <p>
-            <a class="social-btn social-btn-vk" href="#">vk.com</a>
-            <a class="social-btn social-btn-fb" href="#">facebook.com</a>
-            <a class="social-btn social-btn-vimeo" href="#">vimeo.com</a>
-          </p>
+          <a class="btn-blue icon-twitter" href="#"></a>
+          <a class="btn-blue icon-facebook" href="#"></a>
+          <a class="btn-blue icon-youtube" href="#"></a>
         </div>
         <div class="footer-copyright">
           <span>Website by</span>

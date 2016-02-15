@@ -3,9 +3,16 @@ body {
   font-size: 14px;
   line-height: 21px;
   text-align: center;
-  text-transform: uppercase;
   color: #333;
   background-color: #f2f2f2;
+}
+
+body, button, input {
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
 }
 
 h2 {
@@ -60,7 +67,6 @@ h3 {
   font-size: 14px;
   line-height: 26px;
   color: black;
-  text-decoration: none;
 }
 
 .main-navigation a:hover {
@@ -219,7 +225,9 @@ main {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  text-decoration: none;
+}
+
+.btn-brown {
   color: white;
   background-color: #766357;
 }
@@ -229,8 +237,9 @@ main {
 }
 
 .btn-brown:active {
+  color: #857871;
   background-color: #503e33;
-  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .main-footer {
@@ -280,8 +289,8 @@ main {
   margin: 0;
   border: none;
   font-size: 14px;
-  text-transform: uppercase;
   line-height: 38px;
+  height: 38px;
   background-color: #f2f2f2;
 }
 
@@ -299,7 +308,18 @@ main {
   background-color: white;
   border: 2px #e5e5e5 solid;
   line-height: 34px;
+  outline: none;
 }
+
+.hotel-search input.date:active,
+.hotel-search input.date:focus {
+  background-color: white;
+  border: 2px #e5e5e5 solid;
+  line-height: 34px;
+  padding-left: 13px;
+  padding-right: 20px;
+}
+
 
 .hotel-search span.date {
   position: absolute;
@@ -317,6 +337,7 @@ main {
 .hotel-search span.date:active,
 .hotel-search button.number:active {
   color: #81b3d2;
+  outline: none;
 }
 
 .hotel-search label.adults-number,
@@ -351,7 +372,6 @@ main {
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 .btn-blue {
@@ -366,15 +386,21 @@ main {
 .btn-blue:active {
   color: #88b6d1;
   background-color: #5496bd;
+  outline: none;
 }
 
-.footer-content {
+.main-footer .footer-content {
   position: absolute;
   bottom: 0px;
   left: 0px;
   right: 0px;
   font-size: 0;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.hotels-footer .footer-content {
+  font-size: 0;
+  background-color: white;
 }
 
 .footer-hashtag,
@@ -403,7 +429,6 @@ main {
   line-height: 48px;
   text-align: center;
   font-size: 19px;
-  text-decoration: none;
 
   color: white;
   background-color: #81b3d2;
@@ -426,60 +451,131 @@ main {
 }
 
 .hotels-filter {
-  padding-left: 72px;
-  padding-right: 72px;
+  padding: 0px 3%;
+  background: url("../img/filterback.jpg") no-repeat center center;
+  background-size: 100% auto;
+  background-color: #47a;
+}
 
-  background-color: rgba(0, 255, 0, 0.2);
-  outline: 2px green solid;
+.hotels-filter h3,
+.hotels-filter label {
+  display: block;
+  margin: 0;
+  margin-bottom: 25px;
+  line-height: 21px;
+  color: white;
+}
+
+.hotels-filter h3 {
+  font-size: 16px;
 }
 
 .hotels-filter .features,
 .hotels-filter .housing {
   float: left;
-  width: 255px;
-  min-height: 217px;
+  width: 218px;
+  margin-left: 3%;
+  padding-top: 25px;
+  padding-bottom: 8px;
   text-align: left;
-
-  background-color: rgba(0, 0, 255, 0.2);
-  outline: 2px blue solid;
 }
 
 .hotels-filter .pricing {
   float: right;
-  width: 318px;
-  min-height: 217px;
+  width: 30%;
+  margin-right: 3%;
+  padding-top: 25px;
   text-align: left;
+}
 
-  background-color: rgba(0, 0, 255, 0.2);
-  outline: 2px blue solid;
+.price-inputs label {
+  width: 40%;
+  display: inline-block;
+}
+
+.price-inputs input,
+.hotels-filter button {
+  background-color: rgba(0, 0, 0, 0);
+  width:50%;
+  border: 2px white solid;
+  border-radius: 2px;
+  color: white;
 }
 
 .hotels-results-sort {
-  min-height: 57px;
-  padding-left: 72px;
-  padding-right: 72px;
-  padding-top: 30px;
+  padding: 30px 6%;
   text-align: left;
+  font-size: 0;
+  line-height: 86px;
+}
 
-  background-color: rgba(0, 255, 0, 0.2);
-  outline: 2px green solid;
+.hotels-results-sort > * {
+  float: left;
+  vertical-align: middle;
+  font-size: 12px;
+  color: black;
+}
+
+.hotels-results-sort .results-title {
+  font-size: 21px;
+  line-height: 26px;
+  margin-right: 50px;
+}
+
+.hotels-results-sort span {
+  margin-top: 3px;
+  margin-right: 40px;
+  line-height: 18px;
+}
+
+.hotels-results-sort .btn-sort {
+  margin-top: 4px;
+  margin-right: 33px;
+  line-height: 18px;
+}
+
+.hotels-results-sort .btn-sort-dir {
+  float: right;
+  margin-top: 3px;
+  font-size: 23px;
+  line-height: 20px;
+}
+
+.hotels-results-sort a {
+  color: #bbb;
+  border-bottom: 1px #81b3d2 dotted;
+}
+
+.hotels-results-sort a:hover {
+  color: #81b3d2;
+}
+
+.hotels-results-sort a:active {
+  color: black;
+  border: none;
+}
+
+.hotels-results-sort .btn-sort-dir {
+  border: none;
+}
+
+.hotels-results-sort .active {
+  color: #81b3d2;
+  border: none;
 }
 
 .hotels-items {
-  padding-left: 72px;
-  padding-right: 72px;
+  margin: 0;
+  padding: 0;
+  font-size: 0;
   text-align: left;
   list-style: none;
-
-  background-color: rgba(0, 255, 0, 0.2);
-  outline: 2px green solid;
+  border-top: 1px #e5e5e5 solid;
 }
 
 .hotels-items > li {
-  border-top: 1px #e5e5e5 solid;
+  padding: 29px 6% 30px;
   border-bottom: 1px #e5e5e5 solid;
-  min-height: 118px;
-  padding-top: 30px;
 }
 
 .hotels-items img {
@@ -490,27 +586,64 @@ main {
 }
 
 .hotels-items h2 {
+  display: inline-block;
   margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.hotels-items p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.hotels-items .item-type,
+.hotels-items .item-price {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  box-sizing: content-box;
+  width: 116px;
+}
+
+
+.hotels-items a {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+  margin-right: 6px;
+  padding: 3px 17px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .hotels-items .item-details {
   float: left;
-  width: 260px;
-
-  background-color: rgba(0, 0, 255, 0.2);
-  outline: 2px blue solid;
+  margin: 0;
 }
 
 .hotels-items .item-rating {
   float: right;
   width: 110px;
+  font-size: 14px;
   text-align: right;
-
-  background-color: rgba(0, 0, 255, 0.2);
-  outline: 2px blue solid;
 }
 
-.hotels-footer {
-  background-color: rgba(0, 255, 0, 0.2);
-  outline: 2px green solid;
+.hotels-items .icon-star {
+  font-size: 19px;
+  line-height: 21px;
+  color: #81b3d2;
+}
+
+.hotels-items .rating {
+  margin-top: 46px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #666;
+  background-color: #f2f2f2;
 }
