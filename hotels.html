@@ -5,7 +5,6 @@
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/symbols-sedona.css">
   </head>
   <body>
     <header class="container">
@@ -18,7 +17,7 @@
             <a href="#">Фото и Видео</a>
           </li>
           <li class="item-float-right">
-            <a href="hotels.html">Гостиницы</a>
+            <a class="active" href="hotels.html">Гостиницы</a>
           </li>
           <li class="item-float-right">
             <a href="#">Карта штата</a>
@@ -29,46 +28,36 @@
       <form class="hotels-filter clearfix">
         <div class="features">
           <h3>Инфраструктура:</h3>
-          <label>
-            <input type="checkbox" name="features-pool" id="features-pool" checked>
-            Бассейн
-          </label>
-          <label>
-            <input type="checkbox" name="features-parking" id="features-parking">
-            Парковка
-          </label>
-          <label>
-            <input type="checkbox" name="features-wifi" id="features-wifi">
-            Wi-Fi
-          </label>
+          <input type="checkbox" name="features-pool" id="features-pool" checked>
+          <label class="checkbox" for="features-pool">Бассейн</label>
+          <input type="checkbox" name="features-parking" id="features-parking">
+          <label class="checkbox" for="features-parking">Парковка</label>
+          <input type="checkbox" name="features-wifi" id="features-wifi">
+          <label class="checkbox" for="features-wifi">Wi-Fi</label>
         </div>
         <div class="housing">
           <h3>Тип жилья:</h3>
-          <label>
-            <input type="checkbox" name="housing-hotel" checked>
-            Гостиница
-          </label>
-          <label>
-            <input type="checkbox" name="housing-motel" checked>
-            Мотель
-          </label>
-          <label>
-            <input type="checkbox" name="housing-aparments" id="housing-aparments" checked>
-            Апартменты
-          </label>
+          <input type="checkbox" name="housing-hotel" id="housing-hotel" checked>
+          <label class="checkbox" for="housing-hotel">Гостиница</label>
+          <input type="checkbox" name="housing-motel" id="housing-motel" checked>
+          <label class="checkbox" for="housing-motel">Мотель</label>
+          <input type="checkbox" name="housing-aparments" id="housing-aparments" checked>
+          <label class="checkbox" for="housing-aparments">Апартменты</label>
         </div>
         <div class="pricing">
           <h3>Стоимость в сутки (р):</h3>
-            <div class="price-inputs">
-              <label class="price-min">от <input name="price-min" type="text" value="0"></label>
-              <label class="price-max">до <input name="price-max" type="text" value="3000"></label>
+          <div class="price-inputs">
+            <label class="price-min">от <input class="price-min" name="price-min" type="text" value="0"></label>
+            <label class="price-max">до <input class="price-max" name="price-max" type="text" value="3000"></label>
+          </div>
+          <div class="price-range">
+            <div class="price-range-scale">
+               <div class="price-range-bar"></div>
             </div>
-            <div class="price-range-base">
-              <div class="price-range-min"></div>
-              <div class="price-range-middle"></div>
-              <div class="price-range-max"></div>
-            </div>
-            <button class="btn" type="submit">Показать</button>
+            <div class="price-range-min"></div>
+            <div class="price-range-max"></div>
+          </div>
+          <button class="btn-transparent" type="submit">Показать</button>
         </div>
       </form>
     </header>
@@ -86,7 +75,7 @@
         <li class="clearfix">
           <img src="img/amara.jpg" width="135" height="90" alt="Amara Resort and Spa">
           <div class="item-details">
-            <h2>Amara resort &amp; spa</h2>
+            <a class="item-title" href="#">Amara resort &amp; spa</a>
             <p>
               <span class="item-type">Гостиница</span>
               <span class="item-price">от 3500 р.</span>
@@ -109,7 +98,7 @@
         <li class="clearfix">
           <img src="img/desert.jpg" width="135" height="90" alt="Desert Quail Inn">
           <div class="item-details">
-            <h2>Desert Quail Inn</h2>
+            <a class="item-title" href="#">Desert Quail Inn</a>
             <p>
               <span class="item-type">Мотель</span>
               <span class="item-price">от 2000 р.</span>
@@ -128,7 +117,7 @@
         <li class="clearfix">
           <img src="img/villas.jpg" width="135" height="90" alt="Villas at Poco Diablo">
           <div class="item-details">
-            <h2>Villas at Poco Diablo</h2>
+            <a class="item-title" href="#">Villas at Poco Diablo</a>
             <p>
               <span class="item-type">Апартаменты</span>
               <span class="item-price">от 4000 р.</span>
@@ -158,8 +147,8 @@
           <a class="btn-blue icon-youtube" href="#"></a>
         </div>
         <div class="footer-copyright">
-          <span>Website by</span>
           <a href="https://htmlacademy.ru">
+            <span>Website by</span>
             <img src="img/aka.png" width="113" height="39" alt="HTML Academy">
           </a>
         </div>
