@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="container">
+  <body class="container">
+    <header>
       <nav class="main-navigation">
         <ul class="clearfix">
           <li class="item-float-left">
-            <a href="#">Информация</a>
+            <a href="index.html">Информация</a>
           </li>
           <li class="item-float-left">
             <a href="#">Фото и Видео</a>
@@ -32,7 +32,7 @@
           <label class="checkbox" for="features-pool">Бассейн</label>
           <input type="checkbox" name="features-parking" id="features-parking">
           <label class="checkbox" for="features-parking">Парковка</label>
-          <input type="checkbox" name="features-wifi" id="features-wifi">
+          <input type="checkbox" name="features-wifi" id="features-wifi" disabled>
           <label class="checkbox" for="features-wifi">Wi-Fi</label>
         </div>
         <div class="housing">
@@ -41,8 +41,8 @@
           <label class="checkbox" for="housing-hotel">Гостиница</label>
           <input type="checkbox" name="housing-motel" id="housing-motel" checked>
           <label class="checkbox" for="housing-motel">Мотель</label>
-          <input type="checkbox" name="housing-aparments" id="housing-aparments" checked>
-          <label class="checkbox" for="housing-aparments">Апартменты</label>
+          <input type="checkbox" name="housing-aparments" id="housing-aparments" checked disabled>
+          <label class="checkbox" for="housing-aparments">Апартаменты</label>
         </div>
         <div class="pricing">
           <h3>Стоимость в сутки (р):</h3>
@@ -61,7 +61,7 @@
         </div>
       </form>
     </header>
-    <main class="container">
+    <main>
       <div class="hotels-results-sort clearfix">
         <b class="results-title">Найдено: 3</b>
         <span>Сортировка:</span>
@@ -136,7 +136,7 @@
         </li>
         </ul>
     </main>
-    <footer class="hotels-footer container">
+    <footer class="hotels-footer">
       <div class="footer-content">
         <div class="footer-hashtag">
           #visitsedona
@@ -147,10 +147,8 @@
           <a class="btn-blue icon-youtube" href="#"></a>
         </div>
         <div class="footer-copyright">
-          <a href="https://htmlacademy.ru">
-            <span>Website by</span>
-            <img src="img/aka.png" width="113" height="39" alt="HTML Academy">
-          </a>
+          <span>Website by</span>
+          <a href="https://htmlacademy.ru"></a>
         </div>
       </div>
     </footer>

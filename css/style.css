@@ -52,13 +52,16 @@
 .icon-minus::before { content: "\e802"; } /* "" */
 .icon-youtube::before { content: "\f39e"; } /* "" */
 
+html {
+  background-color: #f2f2f2;
+}
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   color: #333333;
-  background-color: #f2f2f2;
 }
 
 body, button, input {
@@ -85,6 +88,7 @@ h3 {
   width: 1200px;
   margin: 0 auto;
   background-color: white;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.3);
 }
 
 .clearfix::after {
@@ -253,11 +257,9 @@ h3 {
 }
 
 .promo-details .promo-container {
-  padding-top: 164px;
+  position: relative;
+  padding-top: 140px;
   min-height: 330px;
-
-  background-repeat: no-repeat;
-  background-position: center 56px;
 }
 
 .promo-details .background-gift {
@@ -265,16 +267,29 @@ h3 {
   padding-right: 65px;
 }
 
-.background-apt {
-  background-image: url("../img/apt.png");
+.promo-details .promo-container::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 56px;
+  width: 76px;
+  height: 76px;
+  margin-left: -38px;
+
+  background-image: url("../img/sprites.png");
+  background-repeat: no-repeat;
 }
 
-.background-food {
-  background-image: url("../img/food.png");
+.background-apt::after {
+  background-position: -5px -152px;
 }
 
-.background-gift {
-  background-image: url("../img/gift.png");
+.background-food::after {
+  background-position: -5px -238px;
+}
+
+.background-gift::after {
+  background-position: -5px -324px;
 }
 
 .index-hotel-search {
@@ -335,18 +350,54 @@ h3 {
 
 .hotel-search {
   position: absolute;
-  top: 0px;
+  top: 0;
   left: 50%;
   width: 458px;
 
+  display: none;
   margin-left: -284px;
   padding: 55px;
 
-  font-size: 0px;
+  font-size: 0;
   font-weight: bold;
   text-align: left;
   color: black;
   background-color: white;
+  box-shadow: 0 0 15px 7px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-search:target {
+  display: block;
+}
+
+@keyframes openform {
+  0%   {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shakeform {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+.hotel-search-show {
+  display: block;
+  animation: openform 0.6s;
+}
+
+.hotel-search-error {
+  animation: shakeform 0.6s;
 }
 
 .hotel-search label.date,
@@ -478,9 +529,9 @@ h3 {
 
 .main-footer .footer-content {
   position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   font-size: 0;
   background-color: rgba(255, 255, 255, 0.9);
 }
@@ -522,24 +573,28 @@ h3 {
   font-size: 23px;
 }
 
-.footer-copyright a {
+.footer-copyright span {
+  vertical-align: middle;
+  margin-right: 7px;
   font-size: 14px;
   color: black;
 }
 
-.footer-copyright img {
+.footer-copyright a {
   display: inline-block;
   vertical-align: middle;
   width: 113px;
   height: 39px;
+  background: url("../img/sprites.png") no-repeat;
+  background-position: -5px -5px;
 }
 
 .footer-copyright a:hover {
-  color: #81b3d2;
+  background-position: -5px -103px;
 }
 
 .footer-copyright a:active {
-  color: rgba(0, 0, 0, 0.3);
+  background-position: -5px -54px;
 }
 
 .hotels-filter {
@@ -599,7 +654,7 @@ h3 {
 .hotels-filter label.checkbox::before {
   content: "\2610";
   position: absolute;
-  left: 0px;
+  left: 0;
   font-family: "symbols-sedona";
   font-size: 26px;
 }
