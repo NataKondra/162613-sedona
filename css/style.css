@@ -118,7 +118,8 @@ h3 {
   text-align: right;
 }
 
-.main-navigation a {
+.main-navigation a,
+.main-navigation span {
   font-weight: bold;
   font-size: 14px;
   line-height: 26px;
@@ -133,15 +134,15 @@ h3 {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-navigation a.active {
+.main-navigation .active {
   color: #766357;
 }
 
-.main-navigation a.active:hover {
+.main-navigation .active:hover {
   color: #604e43;
 }
 
-.main-navigation a.active:active {
+.main-navigation .active:active {
   color: rgba(118, 99, 87, 0.3);
 }
 
