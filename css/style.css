@@ -960,6 +960,7 @@ h3 {
 
 .hotels-items .icon-star {
   display: inline-block;
+  vertical-align: middle;
   width: 24px;
   font-size: 19px;
   line-height: 14px;
